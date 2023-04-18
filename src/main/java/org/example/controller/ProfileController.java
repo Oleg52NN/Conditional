@@ -1,7 +1,6 @@
 package org.example.controller;
 
 import org.example.profile.SystemProfile;
-import org.springframework.boot.context.properties.ConfigurationPropertiesScan;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

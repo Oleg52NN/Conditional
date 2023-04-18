@@ -1,4 +1,5 @@
 package org.example.config;
+
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
 import org.example.profile.DevProfile;
@@ -10,17 +11,16 @@ import org.springframework.context.annotation.Configuration;
 public class JavaConfig {
     @Bean
     @ConditionalOnProperty(
-                    value = "example.profile.dev",
-                    havingValue = "true")
-
+            value = "example.profile.dev",
+            havingValue = "true")
     public SystemProfile devProfile() {
         return new DevProfile();
     }
+
     @Bean
     @ConditionalOnProperty(
             value = "example.profile.dev",
             havingValue = "false")
-
     public SystemProfile prodProfile() {
         return new ProductionProfile();
     }
